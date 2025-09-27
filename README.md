@@ -27,7 +27,7 @@ O projeto segue o padrão **MVC** para organizar o código:
 +------------------+       +----------------------+       +---------------------+
 |  CalculatorView  |       | CalculatorController |       |     Calculator      |
 |      View        | <-->  |      Controller      | <-->  |        Model        |
-|   (Interface)    |       |  (Processa lógica)   |       | (Lógica de Negócio) |
+|   (Interface)    |       |       (Ponte)        |       | (Lógica de Negócio) |
 +------------------+       +----------------------+       +---------------------+
 ```
 
