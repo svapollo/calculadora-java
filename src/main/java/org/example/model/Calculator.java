@@ -10,5 +10,9 @@ public class Calculator {
         return a - b;
     }
 
-    // TODO: Implementar multiplicação e divisão (tratar erro de divisão por zero)
+    public double multiply(double a, double b) {
+        return a * b;
+    }
+
+    // TODO: Implementar divisão (tratar erro de divisão por zero)
 }
