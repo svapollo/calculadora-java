@@ -36,7 +36,8 @@ O projeto segue o padrão **MVC** para organizar o código:
 ![Diagrama de Classes](assets/diagrama-classes.svg)
 
 
-Para mais detalhes sobre o padrão **MVC**, confira este [artigo explicativo](https://medium.com/@robson.trasel/desvendando-o-padr%C3%A3o-mvc-em-java-um-guia-did%C3%A1tico-com-exemplos-ca1ba487f5fb). 📖
+Para mais detalhes sobre o padrão **MVC**, confira este <a href="https://medium.com/@robson.trasel/desvendando-o-padr%C3%A3o-mvc-em-java-um-guia-did%C3%A1tico-com-exemplos-ca1ba487f5fb" target="_blank">artigo explicativo</a>. 📖
+
 
 ---
 
@@ -64,9 +65,9 @@ Para mais detalhes sobre o padrão **MVC**, confira este [artigo explicativo](ht
    ```bash
    mvn test
    ```
-2. Os testes seguem os padrões **Given-When-Then** e **Arrange-Act-Assert**. Para mais informações, confira:
-    - [TDD: O que é e como funciona](https://www.youtube.com/watch?v=o_C_qxhPws4) 🎥
-    - [Given-When-Then e Arrange-Act-Assert](https://medium.com/@matheus.saraujo/testes-give-when-then-3bf3fef55f5e) 📄
+2. Os testes seguem os padrões **Given-When-Then** e **Arrange-Act-Assert**. Para mais informações, confira:  
+   - <a href="https://www.youtube.com/watch?v=o_C_qxhPws4" target="_blank">TDD: O que é e como funciona</a>  
+   - <a href="https://medium.com/@matheus.saraujo/testes-give-when-then-3bf3fef55f5e" target="_blank">Given-When-Then e Arrange-Act-Assert</a>
 
 ---
 
