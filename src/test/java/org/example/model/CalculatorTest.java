@@ -31,13 +31,13 @@ public class CalculatorTest {
         assertEquals(1, calculator.subtract(3, 2));
     }
 
-    // TODO: Implementar mais testes (multiplicação, divisão, divisão por zero, etc.
-    /*
-
-    // Teste para multiplicação
     @Test
-    void givenTwoNumbers_whenMultiply_thenReturnProduct() {}
+    void givenTwoNumbers_whenMultiply_thenReturnProduct() {
+        assertEquals(6, calculator.multiply(2, 3));
+    }
 
+    // TODO: Implementar mais testes (divisão, divisão por zero, etc.
+    /*
     // Teste para divisão
 
     // Teste para divisão por zero
