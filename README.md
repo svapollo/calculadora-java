@@ -84,5 +84,5 @@ Para mais detalhes sobre o padrão **MVC**, confira este [artigo explicativo](ht
 
 ---
 
-💡 **Dica**: Este projeto é uma ótima oportunidade para aprender sobre **MVC**, **TDD** e boas práticas de desenvolvimento em Java. Aproveite! 😄
-Fique à vontade para contribuir! Pull requests são bem-vindos. 🤝
+💡 **Dica**: Este projeto é uma ótima oportunidade para aprender sobre **MVC**, **TDD** e boas práticas de desenvolvimento em Java.  
+😄   Fique à vontade para contribuir! Pull requests são bem-vindos. 
