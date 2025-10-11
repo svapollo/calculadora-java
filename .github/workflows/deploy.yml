@@ -1,0 +1,63 @@
+name: Deploy to AWS Lambda
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test-batata:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+
+      - name: Tests
+        run: mvn test
+
+      - name: Coverage acima de 90%
+        run: |
+          COVERAGE=$(mvn jacoco:report | grep -oP 'Total.*\K\d+(?=%)' | head -1)
+          echo "Coverage is $COVERAGE%"
+          if [ "$COVERAGE" -lt 90 ]; then
+            echo "Code coverage is below 90%. Failing the tests."
+            exit 1
+          fi
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+
+      - name: Build with Maven
+        run: mvn clean package
+
+      - name: Zip application
+        run: zip -j target/calculadora-java.zip target/*.jar
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v3
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Deploy with Terraform
+        run: |
+          cd terraform
+          terraform init
+          terraform plan
+          terraform apply --auto-approve
