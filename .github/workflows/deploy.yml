@@ -42,7 +42,7 @@ jobs:
 
       - name: Deploy with Terraform
         run: |
-          cd terraform
+          cd infra
           terraform init
           terraform plan
           terraform apply --auto-approve
