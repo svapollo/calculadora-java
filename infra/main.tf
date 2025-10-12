@@ -38,5 +38,7 @@ resource "aws_lambda_function" "calculadora_lambda" {
   role          = aws_iam_role.lambda_exec.arn
   s3_bucket     = aws_s3_bucket.lambda_bucket.id
   s3_key        = aws_s3_object.lambda_zip.id
+
+  depends_on = [aws_s3_object.lambda_zip]
 }
 
