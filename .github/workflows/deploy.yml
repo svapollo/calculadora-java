@@ -22,9 +22,6 @@ jobs:
       - name: Build with Maven
         run: mvn clean package
 
-      - name: Zip application
-        run: zip -j target/calculadora-java.zip target/calculadora-java-1.0-SNAPSHOT.jar
-
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v3
         with:
