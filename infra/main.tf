@@ -33,7 +33,7 @@ resource "aws_iam_role_policy_attachment" "lambda_policy" {
 
 resource "aws_lambda_function" "calculadora_lambda" {
   function_name = var.function_name
-  runtime       = "java11"
+  runtime       = "java21"
   handler       = "org.example.Main::handleRequest"
   role          = aws_iam_role.lambda_exec.arn
   s3_bucket     = aws_s3_bucket.lambda_bucket.id
