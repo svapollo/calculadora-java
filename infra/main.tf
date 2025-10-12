@@ -6,6 +6,12 @@ resource "aws_s3_bucket" "lambda_bucket" {
   bucket = "calculadora-java-lambda-bucket"
 }
 
+resource "aws_s3_object" "lambda_zip" {
+  bucket = aws_s3_bucket.lambda_bucket.bucket
+  key    = "calculadora-java.zip"
+  source = "../target/calculadora-java.zip"
+}
+
 resource "aws_iam_role" "lambda_exec" {
   name = "lambda_exec_role"
   assume_role_policy = jsonencode({
@@ -30,7 +36,7 @@ resource "aws_lambda_function" "calculadora_lambda" {
   runtime       = "java11"
   handler       = "org.example.Main::handleRequest"
   role          = aws_iam_role.lambda_exec.arn
-  s3_bucket     = aws_s3_bucket.lambda_bucket.bucket
-  s3_key        = "calculadora-java.zip"
+  s3_bucket     = aws_s3_bucket.lambda_bucket.id
+  s3_key        = aws_s3_object.lambda_zip.id
 }
 

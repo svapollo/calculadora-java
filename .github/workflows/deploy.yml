@@ -40,10 +40,6 @@ jobs:
           unzip -o terraform_1.5.7_linux_amd64.zip
           sudo mv terraform /usr/local/bin/
 
-      - name: Upload ZIP to S3
-        run: |
-          aws s3 cp target/calculadora-java.zip s3://calculadora-java-lambda-bucket/calculadora-java.zip
-
       - name: Deploy with Terraform
         run: |
           cd infra
