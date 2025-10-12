@@ -23,7 +23,7 @@ jobs:
         run: mvn clean package
 
       - name: Zip application
-        run: zip -j target/calculadora-java.zip target/*.jar
+        run: zip -j target/calculadora-java.zip target/*-with-dependencies.jar
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v3
