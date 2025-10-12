@@ -57,8 +57,8 @@ Para testar a função Lambda na AWS, você pode usar o seguinte evento de teste
 ```json
 {
   "operation": "add",
-  "number1": 5,
-  "number2": 3
+  "a": 5,
+  "b": 3
 }
 ```
 
