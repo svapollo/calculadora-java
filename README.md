@@ -40,26 +40,7 @@ Para mais detalhes sobre o padrão **MVC**, confira este <a href="https://medium
 
 
 ---
-
-## 🚀 Como Executar o Programa
-
-1. Certifique-se de ter o **Java 21** e o **Maven** instalados.
-2. Clone este repositório:
-   ```bash
-   git clone https://github.com/svapollo/calculadora-java.git
-   ```
-3. Navegue até o diretório do projeto:
-   ```bash
-   cd calculadora-java
-   ```
-4. Compile e execute o programa:
-   ```bash
-   mvn compile exec:java -Dexec.mainClass="org.example.Main"
-   ```
-
----
-
-## 🧪 Como Rodar os Testes
+## 🧪 Como Rodar os Testes Unitários
 
 1. Para executar os testes,  use o comando:
    ```bash
@@ -68,6 +49,18 @@ Para mais detalhes sobre o padrão **MVC**, confira este <a href="https://medium
 2. Os testes seguem os padrões **Given-When-Then** e **Arrange-Act-Assert**. Para mais informações, confira:  
    - <a href="https://www.youtube.com/watch?v=o_C_qxhPws4" target="_blank">TDD: O que é e como funciona</a>  
    - <a href="https://medium.com/@matheus.saraujo/testes-give-when-then-3bf3fef55f5e" target="_blank">Given-When-Then e Arrange-Act-Assert</a>
+
+---
+## 🚀 Evento para testar Função Lambda na AWS
+Para testar a função Lambda na AWS, você pode usar o seguinte evento de teste JSON:
+
+```json
+{
+  "operation": "add",
+  "number1": 5,
+  "number2": 3
+}
+```
 
 ---
 
