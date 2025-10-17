@@ -70,9 +70,6 @@ Para testar a função Lambda na AWS, você pode usar o seguinte evento de teste
     - Multiplicação e divisão.
     - Tratamento de erro para divisão por zero.
 - ✅ **Testes** para as novas funcionalidades.
-- ⚙️ **Preparar para deploy**:
-    - Pipeline de CI/CD.
-    - Infraestrutura como código (IaC) com Terraform para deploy como AWS Lambda.
 - 📈 **Observabilidade**:
     - Integração com Datadog para monitoramento.
 
